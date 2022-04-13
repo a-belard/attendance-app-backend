@@ -12,6 +12,7 @@ const studentSchema = new mongoose.Schema(
       id: { type: String },
       url: { type: String },
     },
+    status: { type: Boolean },
   },
   {
     timestamps: true,
