@@ -8,13 +8,15 @@ studentController.getStudents = async (req, res) => {
 };
 
 studentController.getStudent = async (req, res) => {
-  let student = studentRepo.getStudentById(req.params.i);
+  let student = await studentRepo.getStudentById(req.params.i);
   if (student) return res.json("No student with that id");
   return res.json(student);
 };
 
 studentController.createStudent = async (req, res) => {
-  let exist_student = studentRepo.getStudentByStudentId(req.body.studentId);
+  let exist_student = await studentRepo.getStudentByStudentId(
+    req.body.studentId
+  );
   if (exist_student)
     return res
       .status(400)
@@ -26,6 +28,7 @@ studentController.createStudent = async (req, res) => {
       res.status(400).json({ success: false, err });
     }
   );
+  return;
 };
 
 module.exports = studentController;
