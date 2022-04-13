@@ -8,19 +8,20 @@ classController.getClasses = async (req, res) => {
 };
 
 classController.getClass = async (req, res) => {
-  let _class = classRepo.getClassById(req.params.i);
+  let _class = await classRepo.getClassById(req.params.i);
   if (!_class) return res.json("No class with that id");
   return res.json(_class);
 };
 
 classController.createClass = async (req, res) => {
-  await classRepo.createclass(req.body).then(
+  await classRepo.createClass(req.body).then(
     (newClass) => res.json({ success: true, class: newClass }),
     (err) => {
       console.error(err);
       res.status(400).json({ success: false, err });
     }
   );
+  return;
 };
 
 module.exports = classController;
