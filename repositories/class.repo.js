@@ -1,4 +1,4 @@
-const Class = require("mongoose").model("Classes");
+const Class = require("../models/class.model");
 
 let getClasses = async () => {
   return await Class.find();
