@@ -22,5 +22,16 @@ let createStudent = async (student) => {
 };
 
 let updateStudent = async (_id, student) => {
-  return await Student.findByIdAndUpdate(id, student);
+  return await Student.updateOne({ _id }, student);
 };
+
+let studentRepo = {
+  getStudents,
+  getStudentById,
+  getStudentByStudentId,
+  getStudentsByClass,
+  createStudent,
+  updateStudent,
+};
+
+module.exports = studentRepo;
