@@ -19,4 +19,4 @@ const teacherSchema = new mongoose.Schema(
   }
 );
 
-mongoose.model("Teachers", teacherSchema);
+mongoose.model("Teacher", teacherSchema);
