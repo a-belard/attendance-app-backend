@@ -6,7 +6,7 @@ const schoolSchema = new mongoose.Schema(
     email: { type: String, unique: true },
     location: { type: String },
     head_master: { type: String },
-    status: { type: Boolean },
+    status: { type: Boolean, default: true },
     password: { type: String },
   },
   {
