@@ -9,7 +9,7 @@ let getStudentById = async (_id) => {
 };
 
 let getStudentByStudentId = async (studentId) => {
-  return await Student.findOne(studentId);
+  return await Student.findOne({ studentId });
 };
 
 let getStudentsByClass = async (classId) => {
