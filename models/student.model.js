@@ -13,6 +13,7 @@ const studentSchema = new mongoose.Schema(
       url: { type: String },
     },
     status: { type: Boolean },
+    password: { type: String },
   },
   {
     timestamps: true,
