@@ -7,7 +7,7 @@ schoolController.getSchools = async (req, res) => {
 };
 
 schoolController.getSchool = async (req, res) => {
-  let school = schoolRepo.getSchoolById(req.params.i);
+  let school = await schoolRepo.getSchoolById(req.params.i);
   if (school) return res.json("No School with that id");
   return res.json(school);
 };
