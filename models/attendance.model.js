@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { boolean } = require("webidl-conversions");
 
 const attendance_schema = new mongoose.Schema(
   {
@@ -11,6 +12,7 @@ const attendance_schema = new mongoose.Schema(
     available_students: [],
     unavailable_students: [],
     schoolId: { type: String },
+    status: { type: Boolean },
   },
   {
     timestamps: true,
