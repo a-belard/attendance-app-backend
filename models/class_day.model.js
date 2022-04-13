@@ -12,4 +12,4 @@ const classday_schema = new mongoose.Schema(
   }
 );
 
-mongoose.model("ClassDays", classday_schema);
+mongoose.model("ClassDay", classday_schema);
