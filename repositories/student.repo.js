@@ -22,5 +22,5 @@ let createStudent = async (student) => {
 };
 
 let updateStudent = async (_id, student) => {
-  return await Student.findByIdAndUpdate();
+  return await Student.findByIdAndUpdate(id, student);
 };
