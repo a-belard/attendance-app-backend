@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const { boolean } = require("webidl-conversions");
 
 const attendance_schema = new mongoose.Schema(
   {
@@ -19,4 +18,4 @@ const attendance_schema = new mongoose.Schema(
   }
 );
 
-mongoose.model("Attendances", attendance_schema);
+mongoose.model("Attendance", attendance_schema);
